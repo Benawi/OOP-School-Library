@@ -15,11 +15,8 @@ class Person
 
   private
 
-  # I needed to do this is order to keep the method name required
-  # in the project
-  # rubocop:disable Naming/PredicateName
-  def is_of_age?
+  def of_age?
     @age >= 18
   end
-  # rubocop:enable Naming/PredicateName
+  
 end
