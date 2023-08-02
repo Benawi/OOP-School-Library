@@ -83,7 +83,7 @@ Clone this repository to your desired folder:
 
 ```
   git clone git@github.com:rabayarabu/OOP-school-library.git
-  cd enumerator
+  cd OOP-school-library
 ```
 
 ### Install
