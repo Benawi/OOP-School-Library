@@ -14,12 +14,12 @@
    <!--  - [Live Demo](#live-demo)
     - [Walkthrough](#Walkthrough) -->
 - [💻 Getting Started](#getting-started)
-  <!-- - [Setup](#setup)
+  - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests) -->
-  <!-- - [Deployment](#triangular_flag_on_post-deployment) -->
+  - [Run tests](#run-tests) 
+  <!-- - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -66,6 +66,44 @@ This repository includes files with Ruby that can be used to recreate a OOP scho
   - Override can_use_services? to always return true
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+### Prerequisites
+
+In order to run this project you need:
+
+- [Ruby](https://www.ruby-lang.org/en/) installed and running. To get more information, read the [installation instructions](https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/articles/ruby_installation_instructions.md).
+- You should be able to use [IRB](https://en.wikipedia.org/wiki/Ruby_(programming_language)#Features).
+### Setup
+
+Clone this repository to your desired folder:
+
+```
+  git clone git@github.com:rabayarabu/OOP-school-library.git
+  cd enumerator
+```
+
+### Install
+
+Install project dependencies with:
+
+```
+  bundle install
+```
+
+### Usage <a name="usage"></a>
+
+To run the project, instantiate the class files in `main.rb` and execute the following command:
+
+```
+  ruby main.rb
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 👥 Authors <a name="authors"></a>
 
