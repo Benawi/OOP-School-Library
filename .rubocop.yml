@@ -1,4 +1,5 @@
 AllCops:
+  AutoCorrect: true
   NewCops: enable
   Exclude:
     - "Guardfile"
