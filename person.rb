@@ -23,3 +23,10 @@ class Person
     @age >= 18
   end
 end
+test = Person.new(name: 'benawi', age: 18)
+
+puts test.name
+
+test.validate_name
+
+puts test.name
