@@ -10,10 +10,3 @@ class Teacher < Person
     true
   end
 end
-
-# Create a object with age < 18 and parent permission == false so if the method
-# is correctly overridden the return should be true
-
-teacher = Teacher.new(name: 'Matilda', age: 17, parent_permission: false, specialization: 'math teacher')
-
-puts teacher.can_use_services?
