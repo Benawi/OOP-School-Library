@@ -1,4 +1,4 @@
-require_relative 'nameable'
+require_relative 'nameAble'
 
 class Person < Nameable
   attr_reader :id
@@ -25,5 +25,4 @@ class Person < Nameable
   def of_age?
     @age.to_i >= 18
   end
-  
 end
