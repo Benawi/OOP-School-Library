@@ -10,12 +10,8 @@ class Student < Person
     '¯\\(ツ)/¯'
   end
 
-  def add_class(classroom)
-    if @classroom.include?(classroom)
-      puts 'Student already enrolled in classroom'
-    else
-      classroom.add_student(self)
-      @classroom.push(classroom)
-    end
+  def classroom=(classroom)
+    @classroom = classroom
+    classroom.students.push(self) unless classroom.students.include?(self)
   end
 end
