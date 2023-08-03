@@ -6,7 +6,7 @@ class Classroom
     @label = label
     @students = []
   end
-  
+
   def add_student(student)
     student.classroom = self
     @students << student
