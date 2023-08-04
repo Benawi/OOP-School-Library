@@ -34,5 +34,42 @@ def handle_option(app, option)
   end
 end
 
+def list_books_option(app)
+  app.list_books
+end
+
+def list_people_option(app)
+  app.list_people
+end
+
+def create_person_option(app)
+  puts 'Create a Student (1) or a Teacher (2)? [Input the number]:'
+  person_type = gets.chomp.to_i
+
+  case person_type
+  when 1
+    app.create_student
+  when 2
+    app.create_teacher
+  else
+    puts 'Invalid option. Please try again.'
+  end
+end
+
+def create_book_option(app)
+  app.create_book
+end
+
+def create_rental_option(app)
+  app.create_rental
+end
+
+def list_rentals_option(app)
+  app.list_rentals_for_person
+end
+
+def exit_app_option(_app)
+  puts 'Thank you for using this App.'
+end
 
 main
