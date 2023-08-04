@@ -127,4 +127,22 @@ class App
     puts 'Rental created successfully!'
   end
 
+  def list_rentals_for_person
+    if @people.empty?
+      puts 'No people available to list rentals.'
+      return
+    end
+
+    person = select_person_to_list_rentals
+    return unless person
+
+    if person.rentals.empty?
+      puts "No rentals found for #{person.class.name}: #{person.name} (ID: #{person.id})."
+    else
+      puts "\nRentals for #{person.class.name}: #{person.name} (ID: #{person.id})"
+      list_person_rentals(person)
+    end
+  end
+
+ 
 end
