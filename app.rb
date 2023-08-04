@@ -162,4 +162,20 @@ class App
     book
   end
 
+  def select_person_for_rental
+    puts 'Select the person for the rental:'
+    list_people
+    print 'Select a person from the following list by number (not id): '
+    person_index = gets.chomp.to_i
+
+    person = @people[person_index]
+
+    if person.nil?
+      puts 'Invalid person index.'
+      return nil
+    end
+
+    person
+  end
+
 end
