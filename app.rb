@@ -61,4 +61,20 @@ class App
     puts "Student created successfully! (ID: #{student.id})"
   end
 
+  def create_teacher
+    print "Enter the teacher's age: "
+    age = gets.chomp.to_i
+
+    print "Enter the teacher's name: "
+    name = gets.chomp
+
+    print "Enter the teacher's specialization: "
+    specialization = gets.chomp
+
+    teacher = Teacher.new(specialization, name: name, age: age)
+    @people << teacher
+
+    puts "Teacher created successfully! (ID: #{teacher.id})"
+  end
+
 end
