@@ -33,4 +33,15 @@ class App
     end
   end
 
+  def list_people
+    if @people.empty?
+      puts 'No people available.'
+    else
+      puts "\nList of People:"
+      @people.each_with_index do |person, index|
+        puts "#{index}. [#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+      end
+    end
+  end
+
 end
