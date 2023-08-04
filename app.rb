@@ -207,5 +207,8 @@ class App
 
   public
 
-
+  def exit_app
+    puts 'Thank you for using this App.'
+    exit
+  end
 end
