@@ -199,4 +199,13 @@ class App
     person
   end
 
+  def list_person_rentals(person)
+    person.rentals.each_with_index do |rental, index|
+      puts "#{index + 1}. #{rental.book.title}, rented on #{rental.date}"
+    end
+  end
+
+  public
+
+
 end
