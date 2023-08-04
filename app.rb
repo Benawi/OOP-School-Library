@@ -144,5 +144,22 @@ class App
     end
   end
 
- 
+  private
+
+  def select_book_for_rental
+    puts 'Select the book for the rental:'
+    list_books
+    print 'Select a book from the following list by number: '
+    book_index = gets.chomp.to_i
+
+    book = @books[book_index]
+
+    if book.nil?
+      puts 'Invalid book index.'
+      return nil
+    end
+
+    book
+  end
+
 end
