@@ -22,5 +22,15 @@ class App
     print 'Enter the option number: '
   end
 
+  def list_books
+    if @books.empty?
+      puts 'No books available.'
+    else
+      puts "\nList of Books:"
+      @books.each_with_index do |book, index|
+        puts "#{index}. Title: \"#{book.title}\", Author: #{book.author}"
+      end
+    end
+  end
 
 end
