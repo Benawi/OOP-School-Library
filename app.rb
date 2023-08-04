@@ -178,4 +178,25 @@ class App
     person
   end
 
+  def input_rental_date
+    print 'Date (YYYY-MM-DD): '
+    gets.chomp
+  end
+
+  def select_person_to_list_rentals
+    puts 'Select the person ID to list rentals:'
+    list_people
+    print 'Enter the person ID: '
+    person_id = gets.chomp.to_i
+
+    person = @people.find { |p| p.id == person_id }
+
+    if person.nil?
+      puts 'Invalid person ID.'
+      return nil
+    end
+
+    person
+  end
+
 end
