@@ -10,7 +10,3 @@ class Student < Person
     '¯\\(ツ)/¯'
   end
 end
-
-student = Student.new(age: 18, parent_permission: true, classroom: '7-B')
-
-puts student.play_hooky

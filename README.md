@@ -58,12 +58,13 @@ This repository includes files with Ruby that can be used to recreate a OOP scho
   - Getters/setters for @name, @age
   - Private of_age? method
   - Public can_use_services? method
-- [x]  Create Student subclass with:
+- [x] Create Student subclass with:
   - Constructor adding @classroom
   - play_hooky method
-- [x]  Create Teacher subclass with:
+- [x] Create Teacher subclass with:
   - Constructor adding @specialization
   - Override can_use_services? to always return true
+- [x] Prepare CapitalizeDecorator and TrimmerDecorator
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,10 +114,9 @@ To run the project, instantiate the class files in `main.rb` and execute the fol
 - Linkdin: [Habtamu](https://www.linkedin.com/in/habtamualemayehu/)
 
 ## 🔭 Future Features <a name="future-features"></a>
-- [ ]  use the "Decorator" design pattern.
 - [ ]  set up associations.
 - [ ]  add basic UI.
-- [ ] refactor your code.
+- [ ]  refactor your code.
 - [ ]  preserve data.
 - [ ]  unit tests.🚀
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
