@@ -65,6 +65,7 @@ This repository includes files with Ruby that can be used to recreate a OOP scho
   - Constructor adding @specialization
   - Override can_use_services? to always return true
 - [x] Prepare CapitalizeDecorator and TrimmerDecorator
+- [x] set up associations
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,7 +115,6 @@ To run the project, instantiate the class files in `main.rb` and execute the fol
 - Linkdin: [Habtamu](https://www.linkedin.com/in/habtamualemayehu/)
 
 ## 🔭 Future Features <a name="future-features"></a>
-- [ ]  set up associations.
 - [ ]  add basic UI.
 - [ ]  refactor your code.
 - [ ]  preserve data.
