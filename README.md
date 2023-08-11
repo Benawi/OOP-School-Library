@@ -115,7 +115,6 @@ To run the project, instantiate the class files in `main.rb` and execute the fol
 - Linkdin: [Habtamu](https://www.linkedin.com/in/habtamualemayehu/)
 
 ## 🔭 Future Features <a name="future-features"></a>
-- [ ]  add basic UI.
 - [ ]  refactor your code.
 - [ ]  preserve data.
 - [ ]  unit tests.🚀
