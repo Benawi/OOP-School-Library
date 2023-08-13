@@ -29,7 +29,7 @@
 - [📝 License](#license)
 
 # 📖 OOP school library <a name="about-project"></a>
-This repository includes files with Ruby that can be used to recreate a OOP school library app.
+This repository includes files with Ruby that can be used to recreate an OOP school library app.
 
 ## 🛠 Built With <a name="built-with"></a>
 
