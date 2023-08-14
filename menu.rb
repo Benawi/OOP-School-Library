@@ -1,16 +1,6 @@
 require './app'
 
 class Menu
-  OPTIONS = {
-    1 => :list_books_option,
-    2 => :list_people_option,
-    3 => :create_person_option,
-    4 => :create_book_option,
-    5 => :create_rental_option,
-    6 => :list_rentals_option,
-    7 => :exit_app_option
-  }.freeze
-
   def initialize(app)
     @app = app
   end
@@ -39,21 +29,18 @@ class Menu
   end
 
   def handle_option(option, app)
-    if OPTIONS[option]
-      send(OPTIONS[option])
-    else
-      puts 'Invalid option. Please try again.'
-    end
+    option_actions = {
+    1 => -> { app.list_books },
+    2 => -> { app.list_people },
+    3 => -> { app.create_person },
+    4 => -> { app.create_book },
+    5 => -> { app.create_rental },
+    6 => -> { app.list_all_rentals_for_person },
+    7 => -> { puts 'Exiting' },
+    default: -> { puts 'Enter a number between 1 and 7.' }
+  }
+
+  action = option_actions[option] || option_actions[:default]
+  action.call
   end
-
-  def list_books_option
-    @app.list_books
-  end
-
-  def list_people_option
-    @app.list_people
-  end
-
-  
-
 end
