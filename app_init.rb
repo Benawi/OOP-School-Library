@@ -4,7 +4,6 @@ class AppInit
   end
 
   def start
-    puts 'Welcome to School Library App!'
     menu = Menu.new(@app)
     menu.display
     exit_app
