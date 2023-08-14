@@ -1,3 +1,5 @@
+require './app'
+
 class Menu
   OPTIONS = {
     1 => :list_books_option,
@@ -18,7 +20,7 @@ class Menu
     loop do
       display_menu
       option = gets.chomp.to_i
-      handle_option(option)
+      handle_option(option, app)
       break if option == 7
     end
   end
@@ -36,7 +38,7 @@ class Menu
     print 'Please select an option: '
   end
 
-  def handle_option(option)
+  def handle_option(option, app)
     if OPTIONS[option]
       send(OPTIONS[option])
     else
@@ -52,5 +54,6 @@ class Menu
     @app.list_people
   end
 
+  
 
 end
