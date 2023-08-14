@@ -51,6 +51,4 @@ class Menu
   def list_people_option
     @app.list_people
   end
-
-
 end
