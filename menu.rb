@@ -10,7 +10,7 @@ class Menu
     loop do
       display_menu
       option = gets.chomp.to_i
-      handle_option(option, app)
+      handle_option(option)
       break if option == 7
     end
   end
@@ -28,14 +28,14 @@ class Menu
     print 'Please select an option: '
   end
 
-  def handle_option(option, app)
+  def handle_option(option)
     option_actions = {
-      1 => -> { app.list_books },
-      2 => -> { app.list_people },
-      3 => -> { app.create_person },
-      4 => -> { app.create_book },
-      5 => -> { app.create_rental },
-      6 => -> { app.list_rentals_for_person },
+      1 => -> { @app.list_books },
+      2 => -> { @app.list_people },
+      3 => -> { @app.create_person },
+      4 => -> { @app.create_book },
+      5 => -> { @app.create_rental },
+      6 => -> { @app.list_rentals_for_person },
       7 => -> { puts 'Exiting. Thank you for using this App.' },
       default: -> { puts 'Enter a number between 1 and 7.' }
     }
