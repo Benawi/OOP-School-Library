@@ -109,10 +109,23 @@ To run the project, instantiate the class files in `main.rb` and execute the fol
 
 ## 👥 Authors <a name="authors"></a>
 
-### 👤 Habtamu Alemayehu
+### 👤 **Habtamu Alemayehu**
 
 - GitHub: [Benawi](https://github.com/Benawi)
 - Linkdin: [Habtamu](https://www.linkedin.com/in/habtamualemayehu/)
+
+### 👤 **Abel Morara**
+
+- GitHub: [@ProgramKingAbel](https://github.com/ProgramKingAbel)
+- Twitter: [@CEOAbel1](https://twitter.com/CEOAbel1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abelmatundamorara-451340250)
+
+### 👤 **Sahalu Aminu**
+
+- GitHub: [@sahlminkok](https://github.com/sahlminkok)
+- Twitter: [@sahlminkok](https://twitter.com/sahlminkok)
+- LinkedIn: [sahlminkok](https://linkedin.com/in/sahlminkok)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 - [ ]  refactor your code.
