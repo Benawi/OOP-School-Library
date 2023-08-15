@@ -1,1 +1,1 @@
-[{"type":"Student","age":23,"name":"ert","parent_permission":true,"classroom":[]}]
+[{"type":"Student","age":23,"name":"ert","parent_permission":true,"classroom":[]},{"type":"Teacher","age":45,"name":"df","parent_permission":true,"specialization":"sdf"}]
