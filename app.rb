@@ -226,4 +226,8 @@ class App
     puts 'Thank you for using this App.'
     exit
   end
+
+  def save_data_to_files
+    Book.save_books_to_json(@books)
+  end
 end
