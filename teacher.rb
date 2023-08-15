@@ -6,6 +6,14 @@ class Teacher < Person
     @specialization = specialization
   end
 
+  def self.new_from_hash(hash)
+    new(age: hash[:age], specialization: hash[:specialization], name: hash[:name])
+  end
+
+  def to_hash
+    super.merge(specialization: @specialization)
+  end
+
   def can_use_services?
     true
   end
