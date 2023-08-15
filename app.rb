@@ -6,7 +6,7 @@ require_relative 'teacher'
 
 class App
   def initialize
-    @books = []
+    @books = Book.load_books_from_json
     @people = []
   end
 
