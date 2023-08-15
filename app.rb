@@ -3,11 +3,22 @@ require_relative 'person'
 require_relative 'rental'
 require_relative 'student'
 require_relative 'teacher'
+require_relative 'data/data_manager'
+require_relative 'data/data_handler'
 
 class App
+  RENTALS_JSON_FILE = 'data/rentals.json'.freeze
+
   def initialize
-    @books = []
-    @people = []
+    @books = Book.load_books_from_json
+
+    data_manager = DataManager.new
+    @data_handler = DataHandler.new(data_manager, RENTALS_JSON_FILE)
+  end
+
+  def load_data
+    @people = @data_handler.load_people_from_json
+    @data_handler.load_rentals_from_json(@people, @books)
   end
 
   def display_menu
@@ -89,7 +100,7 @@ class App
     print "Enter the teacher's specialization: "
     specialization = gets.chomp
 
-    teacher = Teacher.new(specialization, name: name, age: age)
+    teacher = Teacher.new(specialization: specialization, name: name, age: age)
     @people << teacher
 
     puts "Teacher created successfully! (ID: #{teacher.id})"
@@ -113,13 +124,7 @@ class App
       return
     end
 
-    puts 'Select the book for the rental:'
-    list_books
-    print 'Select a book from the following list by number: '
-    book_index = gets.chomp.to_i
-
-    book = @books[book_index]
-
+    book = select_book_for_rental
     if book.nil?
       puts 'Invalid book index.'
       return
@@ -141,6 +146,7 @@ class App
     date = gets.chomp
 
     person.add_rental(date, book)
+    @data_handler.save_rentals_to_json(@people)
 
     puts 'Rental created successfully!'
   end
@@ -223,9 +229,20 @@ class App
     end
   end
 
+  def load_data_from_files
+    @books = Book.load_books_from_json
+  end
+
+  def save_data_to_files
+    Book.save_books_to_json(@books)
+    @data_handler.save_people_to_json(@people)
+  end
+
   public
 
   def exit_app
+    save_data_to_files
+    @data_handler.save_rentals_to_json(@people)
     puts 'Thank you for using this App.'
     exit
   end

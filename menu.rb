@@ -36,7 +36,7 @@ class Menu
       4 => -> { @app.create_book },
       5 => -> { @app.create_rental },
       6 => -> { @app.list_rentals_for_person },
-      7 => -> { puts 'Exiting. Thank you for using this App.' },
+      7 => -> { @app.exit_app },
       default: -> { puts 'Enter a number between 1 and 7.' }
     }
 
