@@ -6,7 +6,7 @@ require_relative 'teacher'
 
 class App
   def initialize
-       @books = Book.load_books_from_json
+    @books = Book.load_books_from_json
     @people = []
   end
 
@@ -216,7 +216,6 @@ class App
       puts "#{index + 1}. #{rental.book.title}, rented on #{rental.date}"
     end
   end
-
 
   def load_data_from_files
     @books = Book.load_books_from_json
