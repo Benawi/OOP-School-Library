@@ -1,6 +1,8 @@
+require_relative 'app'
+
 class AppInit
-  def initialize
-    @app = App.new
+  def initialize(app)
+    @app = app
   end
 
   def start
