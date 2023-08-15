@@ -23,3 +23,11 @@ def self.load_books_from_json
   books_data = JSON.parse(File.read('books.json'))
   books_data.map { |data| Book.new(data['title'], data['author']) }
 end
+
+def to_hash
+  {
+    'title' => @title,
+    'author' => @author,
+    'rentals' => @rentals.map { |rental| { 'date' => rental.date } }
+  }
+end
