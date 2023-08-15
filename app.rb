@@ -228,12 +228,12 @@ class App
   def load_data_from_files
     @books = Book.load_books_from_json
   end
-  
+
   def save_data_to_files
     Book.save_books_to_json(@books)
     @data_handler.save_people_to_json(@people)
   end
-  
+
   public
 
   def exit_app
@@ -241,5 +241,4 @@ class App
     puts 'Thank you for using this App.'
     exit
   end
-
 end
