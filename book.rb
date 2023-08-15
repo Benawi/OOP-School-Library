@@ -13,6 +13,8 @@ class Book
     rental
   end
 
+  public 
+  
   def self.save_books_to_json(books)
     books_data = books.map(&:to_hash)
     File.write('books.json', JSON.pretty_generate(books_data))

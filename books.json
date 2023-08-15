@@ -10,7 +10,9 @@
     "title": "ruby",
     "author": "Habtamu",
     "rentals": [
-
+      {
+        "date": "2023-08-15"
+      }
     ]
   },
   {
