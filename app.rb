@@ -11,7 +11,7 @@ class App
 
   def initialize
     @books = Book.load_books_from_json
-    @people = []
+
     data_manager = DataManager.new
     @data_handler = DataHandler.new(data_manager, RENTALS_JSON_FILE)
   end

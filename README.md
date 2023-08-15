@@ -66,6 +66,7 @@ This repository includes files with Ruby that can be used to recreate an OOP sch
   - Override can_use_services? to always return true
 - [x] Prepare CapitalizeDecorator and TrimmerDecorator
 - [x] set up associations
+- [x] preserve data.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,8 +129,6 @@ To run the project, instantiate the class files in `main.rb` and execute the fol
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
-- [ ]  refactor your code.
-- [ ]  preserve data.
 - [ ]  unit tests.🚀
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
