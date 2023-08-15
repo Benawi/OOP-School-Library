@@ -6,7 +6,7 @@ require_relative 'teacher'
 
 class App
   def initialize
-    @books = Book.load_books_from_json
+       @books = Book.load_books_from_json
     @people = []
   end
 
@@ -113,13 +113,7 @@ class App
       return
     end
 
-    puts 'Select the book for the rental:'
-    list_books
-    print 'Select a book from the following list by number: '
-    book_index = gets.chomp.to_i
-
-    book = @books[book_index]
-
+    book = select_book_for_rental
     if book.nil?
       puts 'Invalid book index.'
       return
