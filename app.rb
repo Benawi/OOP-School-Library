@@ -9,7 +9,7 @@ require_relative 'data/data_handler'
 class App
   def initialize
     @books = Book.load_books_from_json
-    @people = []
+
     data_manager = DataManager.new
     @data_handler = DataHandler.new(data_manager)
   end
