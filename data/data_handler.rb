@@ -49,13 +49,13 @@ class DataHandler
 
   def load_rentals_from_json(people, books)
     return unless File.exist?(@rentals_json_file)
-  
+
     rentals_data = JSON.parse(File.read(@rentals_json_file))
     rentals_data.each do |rental_info|
       person = people.find { |p| p.id == rental_info['person_id'] }
       book = books.find { |b| b.title == rental_info['book_title'] }
       next unless person && book
-  
+
       rental = Rental.new(rental_info['rental_date'], book, person)
       person.add_existing_rental(rental)
     end

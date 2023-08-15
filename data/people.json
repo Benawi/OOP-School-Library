@@ -1,1 +1,34 @@
-[{"type":"Student","age":23,"name":"ert","parent_permission":true,"classroom":[]},{"type":"Teacher","age":45,"name":"df","parent_permission":true,"specialization":"sdf"},{"type":"Student","age":24,"name":"bena\t","parent_permission":false,"classroom":[]},{"type":"Teacher","age":23,"name":"sera","parent_permission":true,"specialization":"cs"}]
+[
+  {
+    "type": "Student",
+    "age": 23,
+    "name": "ert",
+    "parent_permission": true,
+    "classroom": [
+
+    ]
+  },
+  {
+    "type": "Teacher",
+    "age": 45,
+    "name": "df",
+    "parent_permission": true,
+    "specialization": "sdf"
+  },
+  {
+    "type": "Student",
+    "age": 24,
+    "name": "bena\t",
+    "parent_permission": false,
+    "classroom": [
+
+    ]
+  },
+  {
+    "type": "Teacher",
+    "age": 23,
+    "name": "sera",
+    "parent_permission": true,
+    "specialization": "cs"
+  }
+]

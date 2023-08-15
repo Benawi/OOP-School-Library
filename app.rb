@@ -7,7 +7,7 @@ require_relative 'data/data_manager'
 require_relative 'data/data_handler'
 
 class App
-  RENTALS_JSON_FILE = 'data/rentals.json'
+  RENTALS_JSON_FILE = 'data/rentals.json'.freeze
 
   def initialize
     @books = Book.load_books_from_json
