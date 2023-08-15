@@ -217,7 +217,10 @@ class App
     end
   end
 
-  public
+
+  def load_data_from_files
+    @books = Book.load_books_from_json
+  end
 
   def exit_app
     puts 'Thank you for using this App.'
