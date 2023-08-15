@@ -8,7 +8,7 @@ require_relative 'data/data_handler'
 
 class App
   def initialize
-    @books = []
+    @books = Book.load_books_from_json
     @people = []
     data_manager = DataManager.new
     @data_handler = DataHandler.new(data_manager)
@@ -121,13 +121,7 @@ class App
       return
     end
 
-    puts 'Select the book for the rental:'
-    list_books
-    print 'Select a book from the following list by number: '
-    book_index = gets.chomp.to_i
-
-    book = @books[book_index]
-
+    book = select_book_for_rental
     if book.nil?
       puts 'Invalid book index.'
       return
@@ -231,11 +225,17 @@ class App
     end
   end
 
-  public
+  def load_data_from_files
+    @books = Book.load_books_from_json
+  end
 
   def exit_app
     @data_handler.save_people_to_json(@people)
     puts 'Thank you for using this App.'
     exit
+  end
+
+  def save_data_to_files
+    Book.save_books_to_json(@books)
   end
 end

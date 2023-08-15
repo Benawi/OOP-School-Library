@@ -4,5 +4,11 @@ require_relative 'menu'
 require_relative 'data/data_manager'
 require_relative 'data/data_handler'
 
-app_initializer = AppInit.new
+app = App.new
+app_initializer = AppInit.new(app)
+
+at_exit do
+  app_initializer.save_data_to_files
+end
+
 app_initializer.start
