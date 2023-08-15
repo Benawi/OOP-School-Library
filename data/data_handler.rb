@@ -8,7 +8,7 @@ class DataHandler
   def save_people_to_json(people)
     people_data = people.map(&:to_hash)
     begin
-    @data_manager.save_to_json('people.json', people_data)
+    @data_manager.save_to_json('../data/people.json', people_data)
     puts 'People data saved to people.json Successfully'
     rescue StandardError => e
       puts "Error saving file to JSON: #{e.message}"
@@ -17,7 +17,7 @@ class DataHandler
 
   def load_people_from_json
     begin
-    people_data = @data_manager.load_from_json('people.json')
+    people_data = @data_manager.load_from_json('../data/people.json')
     loaded_people = []
 
     people_data.each do |person_data|
