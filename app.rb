@@ -3,8 +3,8 @@ require_relative 'person'
 require_relative 'rental'
 require_relative 'student'
 require_relative 'teacher'
-require_relative './data/data_manager'
-require_relative './data/data_handler'
+require_relative 'data/data_manager'
+require_relative 'data/data_handler'
 
 class App
   def initialize
@@ -17,7 +17,6 @@ class App
   def load_data
     @people = @data_handler.load_people_from_json
   end
-
 
   def display_menu
     puts "\nOptions:"
