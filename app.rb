@@ -7,15 +7,18 @@ require_relative 'data/data_manager'
 require_relative 'data/data_handler'
 
 class App
+  RENTALS_JSON_FILE = 'data/rentals.json'
+
   def initialize
     @books = Book.load_books_from_json
     @people = []
     data_manager = DataManager.new
-    @data_handler = DataHandler.new(data_manager)
+    @data_handler = DataHandler.new(data_manager, RENTALS_JSON_FILE)
   end
 
   def load_data
     @people = @data_handler.load_people_from_json
+    @data_handler.load_rentals_from_json(@people, @books)
   end
 
   def display_menu
@@ -143,6 +146,7 @@ class App
     date = gets.chomp
 
     person.add_rental(date, book)
+    @data_handler.save_rentals_to_json(@people)
 
     puts 'Rental created successfully!'
   end
@@ -238,6 +242,7 @@ class App
 
   def exit_app
     save_data_to_files
+    @data_handler.save_rentals_to_json(@people)
     puts 'Thank you for using this App.'
     exit
   end
