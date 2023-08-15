@@ -3,8 +3,8 @@ require_relative 'person'
 require_relative 'rental'
 require_relative 'student'
 require_relative 'teacher'
-require_relative 'data_manager'
-require_relative 'data_handler'
+require_relative './data/data_manager'
+require_relative './data/data_handler'
 
 class App
   def initialize
@@ -98,7 +98,7 @@ class App
     print "Enter the teacher's specialization: "
     specialization = gets.chomp
 
-    teacher = Teacher.new(specialization, name: name, age: age)
+    teacher = Teacher.new(specialization: specialization, name: name, age: age)
     @people << teacher
 
     puts "Teacher created successfully! (ID: #{teacher.id})"
