@@ -1,37 +1,7 @@
 [
   {
-    "title": "java",
-    "author": "benawi",
-    "rentals": [
-
-    ]
-  },
-  {
-    "title": "ruby",
+    "title": "Ruby testing",
     "author": "Habtamu",
-    "rentals": [
-      {
-        "date": "2023-08-15"
-      }
-    ]
-  },
-  {
-    "title": "Microverse developer",
-    "author": "benawi",
-    "rentals": [
-
-    ]
-  },
-  {
-    "title": "the dig",
-    "author": "musa",
-    "rentals": [
-
-    ]
-  },
-  {
-    "title": "ruby test",
-    "author": "benawi",
     "rentals": [
 
     ]
