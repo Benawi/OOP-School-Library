@@ -3,12 +3,21 @@ require_relative 'person'
 require_relative 'rental'
 require_relative 'student'
 require_relative 'teacher'
+require_relative 'data_manager'
+require_relative 'data_handler'
 
 class App
   def initialize
     @books = []
     @people = []
+    data_manager = DataManager.new
+    @data_handler = DataHandler.new(data_manager)
   end
+
+  def load_data
+    @people = @data_handler.load_people_from_json
+  end
+
 
   def display_menu
     puts "\nOptions:"
@@ -226,6 +235,7 @@ class App
   public
 
   def exit_app
+    @data_handler.save_people_to_json(@people)
     puts 'Thank you for using this App.'
     exit
   end

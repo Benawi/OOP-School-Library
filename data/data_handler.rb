@@ -7,11 +7,16 @@ class DataHandler
 
   def save_people_to_json(people)
     people_data = people.map(&:to_hash)
+    begin
     @data_manager.save_to_json('people.json', people_data)
     puts 'People data saved to people.json Successfully'
+    rescue StandardError => e
+      puts "Error saving file to JSON: #{e.message}"
+    end
   end
 
   def load_people_from_json
+    begin
     people_data = @data_manager.load_from_json('people.json')
     loaded_people = []
 
@@ -23,5 +28,9 @@ class DataHandler
       end
     end
     loaded_people
+    rescue StandardError => e
+      puts "Error loading from JSON: #{e.message}"
+      []
+    end
   end
 end

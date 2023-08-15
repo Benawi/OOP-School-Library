@@ -4,6 +4,7 @@ class AppInit
   end
 
   def start
+    @app.load_data
     menu = Menu.new(@app)
     menu.display
   end

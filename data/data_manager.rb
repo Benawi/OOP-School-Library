@@ -10,6 +10,6 @@ class DataManager
 
   def load_from_json(filename)
     json_data = File.read(filename)
-    JSON.parse(json_Data, symbolize_names: true)
+    JSON.parse(json_data, symbolize_names: true)
   end
 end
