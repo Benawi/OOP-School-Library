@@ -67,6 +67,7 @@ This repository includes files with Ruby that can be used to recreate an OOP sch
 - [x] Prepare CapitalizeDecorator and TrimmerDecorator
 - [x] set up associations
 - [x] preserve data.
+- [x] Add unit test
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,7 +130,7 @@ To run the project, instantiate the class files in `main.rb` and execute the fol
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
-- [ ]  unit tests.🚀
+- [ ]  Optimize the performance of the system.🚀
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
