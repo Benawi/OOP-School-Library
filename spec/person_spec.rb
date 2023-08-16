@@ -45,4 +45,17 @@ RSpec.describe Person do
       expect(person.rentals).to include(rental)
     end
   end
+
+  describe '#to_hash' do
+    it 'returns a hash representation for person to store in json file' do
+      person = Person.new(name: 'Eve', age: 22)
+      hash = person.to_hash
+      expect(hash).to include(
+        type: 'Person',
+        age: 22,
+        name: 'Eve',
+        parent_permission: true
+      )
+    end
+  end
 end
