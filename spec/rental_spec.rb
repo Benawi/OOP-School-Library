@@ -1,6 +1,6 @@
-require_relative '../rental.rb'
-require_relative '../book.rb'
-require_relative '../person.rb'
+require_relative '../rental'
+require_relative '../book'
+require_relative '../person'
 
 describe Rental do
   book = Book.new('Title', 'Author')

@@ -1,5 +1,5 @@
-require_relative '../book.rb'
-require_relative '../person.rb'
+require_relative '../book'
+require_relative '../person'
 
 describe Book do
   book = Book.new('Title', 'Author')
@@ -16,7 +16,7 @@ describe Book do
   context 'When adding a rental' do
     it 'adds a rental to the person and book' do
       rental = person.add_rental(rental_date, book)
-      
+
       expect(book.rentals).to include(rental)
       expect(rental.date).to eq(rental_date)
       expect(rental.book).to eq(book)
@@ -27,10 +27,10 @@ describe Book do
   context '#to_hash method' do
     it 'returns a hash with the book attributes' do
       expect(book.to_hash).to eq({
-        'title' => 'Title',
-        'author' => 'Author',
-        'rentals' => [{'date' => rental_date}]
-      })
+                                   'title' => 'Title',
+                                   'author' => 'Author',
+                                   'rentals' => [{ 'date' => rental_date }]
+                                 })
     end
   end
 end

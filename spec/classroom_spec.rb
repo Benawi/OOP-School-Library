@@ -1,5 +1,5 @@
-require_relative '../classroom.rb'
-require_relative '../student.rb'
+require_relative '../classroom'
+require_relative '../student'
 
 describe Classroom do
   classroom = Classroom.new('A')
