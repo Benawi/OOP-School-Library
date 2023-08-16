@@ -21,5 +21,19 @@ RSpec.describe Teacher do
       expect(teacher.instance_variable_get(:@specialization)).to eq('History')
     end
   end
+
+   describe '#to_hash' do
+    it 'returns a hash representation of the teacher to data file' do
+      teacher = Teacher.new(name: 'Eve', age: 40, specialization: 'Science')
+      hash = teacher.to_hash
+      expect(hash).to include(
+        type: 'Teacher',
+        age: 40,
+        name: 'Eve',
+        parent_permission: true,
+        specialization: 'Science'
+      )
+    end
+  end
 end
 
