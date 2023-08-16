@@ -1,4 +1,4 @@
-require 'nameable'
+require './nameable'
 
 describe Nameable do
   context 'When implemeting correct name' do
