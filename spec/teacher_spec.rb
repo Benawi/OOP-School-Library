@@ -11,5 +11,15 @@ RSpec.describe Teacher do
       expect(teacher.instance_variable_get(:@specialization)).to eq('Math')
     end
   end
+
+   describe 'new_from_hash method' do
+    it 'creates a new teacher from a hash from data file' do
+      hash = { name: 'Bob', age: 45, specialization: 'History' }
+      teacher = Teacher.new_from_hash(hash)
+      expect(teacher.name).to eq('Bob')
+      expect(teacher.age).to eq(45)
+      expect(teacher.instance_variable_get(:@specialization)).to eq('History')
+    end
+  end
 end
 
