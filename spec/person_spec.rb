@@ -34,4 +34,15 @@ RSpec.describe Person do
     expect(person.can_use_services?).to eq(false)
     end
   end
+
+  describe '#add_rental method' do
+    it 'Adds a rental to the person and associated book' do
+      person = Person.new
+      book = instance_double('Book')
+      expect(book).to receive(:add_rental)
+
+      rental = person.add_rental('2023-08-16', book)
+      expect(person.rentals).to include(rental)
+    end
+  end
 end
