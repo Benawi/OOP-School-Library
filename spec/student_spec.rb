@@ -34,4 +34,11 @@ RSpec.describe Student do
       )
     end
   end
+
+  describe '#play_hooky method' do
+    it 'returns the play hooky message' do
+      student = Student.new(name: 'Charlie', age: 18)
+      expect(student.play_hooky).to eq('¯\\(ツ)/¯')
+    end
+  end
 end
