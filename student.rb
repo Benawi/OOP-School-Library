@@ -1,4 +1,5 @@
 require_relative 'person'
+require_relative 'classrom'
 
 class Student < Person
   def initialize(age:, name: 'Unknown', parent_permission: true)
