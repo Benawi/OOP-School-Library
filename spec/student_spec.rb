@@ -13,7 +13,7 @@ RSpec.describe Student do
 
   describe '#new_from_hash method' do
     it 'creates a new student from Hash' do
-      hash = {name: 'Bob', age: 12, parent_permission: true }
+      hash = { name: 'Bob', age: 12, parent_permission: true }
       student = Student.new_from_hash(hash)
       expect(student.name).to eq('Bob')
       expect(student.age).to eq(12)

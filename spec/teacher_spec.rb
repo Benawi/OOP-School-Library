@@ -12,7 +12,7 @@ RSpec.describe Teacher do
     end
   end
 
-   describe 'new_from_hash method' do
+  describe 'new_from_hash method' do
     it 'creates a new teacher from a hash from data file' do
       hash = { name: 'Bob', age: 45, specialization: 'History' }
       teacher = Teacher.new_from_hash(hash)
@@ -22,7 +22,7 @@ RSpec.describe Teacher do
     end
   end
 
-   describe '#to_hash' do
+  describe '#to_hash' do
     it 'returns a hash representation of the teacher to data file' do
       teacher = Teacher.new(name: 'Eve', age: 40, specialization: 'Science')
       hash = teacher.to_hash
@@ -36,7 +36,7 @@ RSpec.describe Teacher do
     end
   end
 
-   describe '#can_use_services?' do
+  describe '#can_use_services?' do
     it 'returns true for teacher' do
       teacher = Teacher.new(name: 'Charlie', age: 50, specialization: 'English')
       expect(teacher.can_use_services?).to eq(true)

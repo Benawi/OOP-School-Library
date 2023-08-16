@@ -28,10 +28,10 @@ RSpec.describe Person do
       person = Person.new(age: 5, parent_permission: true)
       expect(person.can_use_services?).to eq(true)
     end
-    
+
     it 'returns false if the person age < 18 && parent_permission: false' do
-    person = Person.new(age: 15, parent_permission: false)
-    expect(person.can_use_services?).to eq(false)
+      person = Person.new(age: 15, parent_permission: false)
+      expect(person.can_use_services?).to eq(false)
     end
   end
 
