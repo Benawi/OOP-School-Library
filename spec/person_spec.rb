@@ -9,5 +9,10 @@ RSpec.describe Person do
       expect(person.age).to eq(25)
       expect(person.instance_variable_get(:@parent_permission)).to eq(true)
     end
+
+    it 'Returns correct name of the person created' do
+      person = Person.new(name: 'Everlyn')
+      expect(person.correct_name).to eq('Everlyn')
+    end
   end
 end
