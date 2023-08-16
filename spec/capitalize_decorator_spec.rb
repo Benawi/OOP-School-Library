@@ -1,19 +1,19 @@
-require './decorator'
-require './capitalize_decorator'
+require_relative '../capitalize_decorator'
+require_relative '../person'
 
-describe CapitalizeDecorator do
-  let(:decorator) { CapitalizeDecorator.new(double('decorated object')) }
-
+RSpec.describe CapitalizeDecorator do
   describe '#correct_name' do
-    it 'capitalizes the name returned by the decorated object' do
-      allow(decorator).to receive(:correct_name).and_return('Benawi')
-
-      expect(decorator.correct_name).to eq('Benawi')
+    it 'capitalizes the name of a person' do
+      person = Person.new(name:'benawi alex', age:25)
+      decorator = CapitalizeDecorator.new(person)
+      expect(decorator.correct_name).to eq('Benawi alex')
     end
 
-    it 'leaves an already capitalized name as-is' do
-      allow(decorator).to receive(:correct_name).and_return('John')
-      expect(decorator.correct_name).to eq('John')
+    it 'does not modify the original name' do
+      person = Person.new(name:'Jane smith', age:25)
+      decorator = CapitalizeDecorator.new(person)
+      decorator.correct_name
+      expect(person.name).to eq('Jane smith')
     end
   end
 end
