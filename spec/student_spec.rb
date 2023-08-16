@@ -20,4 +20,18 @@ RSpec.describe Student do
       expect(student.instance_variable_get(:@parent_permission)).to eq(true)
     end
   end
+
+  describe '#to_hash method' do
+    it 'returns a hash representation of the student on save to data file' do
+      student = Student.new(name: 'Eve', age: 15)
+      hash = student.to_hash
+      expect(hash).to include(
+        type: 'Student',
+        age: 15,
+        name: 'Eve',
+        parent_permission: true,
+        classroom: []
+      )
+    end
+  end
 end
