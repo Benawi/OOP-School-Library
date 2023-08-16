@@ -41,4 +41,14 @@ RSpec.describe Student do
       expect(student.play_hooky).to eq('¯\\(ツ)/¯')
     end
   end
+
+  describe '#classroom= method' do
+    it 'assigns/adds the student to the classroom' do
+      student = Student.new(name: 'David', age: 16)
+      classroom = Classroom.new('Class one')
+      student.classroom = classroom
+
+      expect(classroom.students).to include(student)
+    end
+  end
 end
