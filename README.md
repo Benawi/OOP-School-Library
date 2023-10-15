@@ -50,7 +50,7 @@ This repository includes files with Ruby that can be used to recreate an OOP sch
 
 ## 🔑 Key Features <a name="key-features"></a>
 
-### OOP school library[Requirements](https://github.com/microverseinc/curriculum-ruby/blob/main/oop/school_library_people.md)
+### OOP school library
 
 - [x] Create Person class with:
   - Instance vars: @id, @name, @age
