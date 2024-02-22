@@ -100,7 +100,7 @@ Install project dependencies with:
 
 ### Usage <a name="usage"></a>
 
-To run the project, instantiate the class files in `main.rb` and execute the following command:
+To run the project, instantiate the class files in `main. rb` and execute the following command:
 
 ```
   ruby main.rb
