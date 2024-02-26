@@ -126,7 +126,7 @@ To run the project, instantiate the class files in `main. rb` and execute the fo
 
 - GitHub: [@sahlminkok](https://github.com/sahlminkok)
 - Twitter: [@sahlminkok](https://twitter.com/sahlminkok)
-- LinkedIn: [sahlminkok](https://linkedin.com/in/sahlminkok)
+- LinkedIn [sahlminkok](https://linkedin.com/in/sahlminkok)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
